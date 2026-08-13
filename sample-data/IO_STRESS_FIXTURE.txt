@@ -1,0 +1,1 @@
+This deterministic 12.5 MB binary fixture is not radio data and does not contain a recording of RF signals. It is bundled only to exercise archive/export file I/O at a realistic mobile-session payload size. It contains no personal data.
