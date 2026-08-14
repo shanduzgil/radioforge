@@ -1,129 +1,87 @@
 # 📡 RADIOFORGE
 
-<p align="center">
+## رصدخانه شخصی شبکه برای Android
 
-<img src="assets/radioforge-logo.png" alt="RADIOFORGE" width="340">
-
-</p>
-
-<p align="center">
-
-<b>رصدخانه شخصی شبکه برای Android</b>
-
-</p>
+RADIOFORGE یک ابزار Android برای مشاهده، ثبت و تحلیل اطلاعات شبکه‌ای است که سیستم و دستگاه در اختیار برنامه قرار می‌دهند.
 
 ---
 
-## 📱 دانلود برنامه
+## 📥 دانلود برنامه
 
-### آخرین نسخه APK
+### 🚀 آخرین نسخه
 
-[⬇️ دانلود مستقیم RADIOFORGE](https://github.com/shanduzgil/radioforge/releases/latest/download/RadioForge.apk)
+[⬇️ دانلود مستقیم RADIOFORGE APK](https://github.com/shanduzgil/radioforge/releases/download/v1.0.0/RadioForge.apk)
 
-### صفحه Releases
+### 📦 صفحه Release
 
-https://github.com/shanduzgil/radioforge/releases
-
----
-
-## ✨ RADIOFORGE چیست؟
-
-RADIOFORGE یک ابزار Android برای ثبت و تحلیل اطلاعات شبکه‌ای است که سیستم‌عامل و دستگاه در اختیار برنامه قرار می‌دهند.
-
-هدف پروژه تبدیل داده‌های فنی شبکه به اطلاعات قابل‌فهم، قابل‌ذخیره و قابل‌تحلیل است.
+[مشاهده RADIOFORGE v1.0.0](https://github.com/shanduzgil/radioforge/releases/tag/v1.0.0)
 
 ---
 
-## 📶 قابلیت‌ها
+## ✨ قابلیت‌ها
 
-- LTE / 5G در دستگاه‌های پشتیبانی‌شده
-- تشخیص اپراتور و نوع شبکه
-- اطلاعات Cell در صورت دسترسی Android
-- RSRP
-- RSRQ
-- RSSI / RSSNR
-- SINR
-- Cell ID / NCI
-- PCI
-- TAC
-- EARFCN / NRARFCN
-- ثبت Session
-- ذخیره محلی
-- گزارش و Export
-- رابط فارسی و RTL
-- فونت فارسی
-- طراحی Dark و مدرن
-- Local-first
-- Privacy-first
+- 📶 بررسی نوع شبکه در دستگاه‌های پشتیبانی‌شده
+- 📡 اطلاعات Cellular
+- 🧬 Cell ID / NCI
+- 📊 PCI / TAC
+- 📈 RSRP / RSRQ
+- 📶 RSSI / SINR در صورت دسترسی
+- 🌐 اطلاعات اتصال
+- 💾 ذخیره محلی Session
+- 📦 Export گزارش
+- 🇮🇷 رابط فارسی و RTL
+- 🎨 رابط کاربری مدرن
+- 🔐 Local-first / Privacy-first
 
 ---
 
-## 🚀 نصب
+## 📱 نصب
 
-1. فایل APK را دانلود کنید.
-2. فایل `RadioForge.apk` را در Android باز کنید.
+1. روی لینک دانلود APK بزنید.
+2. فایل `RadioForge.apk` را باز کنید.
 3. مجوزهای موردنیاز را تأیید کنید.
-4. برنامه را اجرا کنید.
-5. پایش شبکه را شروع کنید.
+4. برنامه را نصب و اجرا کنید.
 
 ---
 
-## 🛠 ساخت از سورس
+## 🛠️ Build
 
 ```bash
-./gradlew assembleDebug
+./gradlew assembleDebug --no-daemon
 ```
 
-APK:
+خروجی:
 
-```text
+```
 app/build/outputs/apk/debug/app-debug.apk
 ```
 
 ---
 
-## ⚠️ محدودیت فنی
+## ⚠️ محدودیت
 
-RADIOFORGE اطلاعاتی را که Android یا مودم در اختیار برنامه قرار نمی‌دهد، حدس نمی‌زند.
+RADIOFORGE فقط اطلاعاتی را نمایش می‌دهد که Android و سخت‌افزار دستگاه در اختیار برنامه قرار می‌دهند.
 
-این پروژه ضبط مستقیم نمونه‌های خام RF/IQ یا Baseband را انجام نمی‌دهد.
+این برنامه نمونه‌های خام RF/IQ یا Baseband را ضبط نمی‌کند.
 
 ---
 
 ## 🔐 حریم خصوصی
 
-RADIOFORGE با رویکرد Local-first طراحی شده است.
-
-داده‌های Session به‌صورت پیش‌فرض روی دستگاه نگهداری می‌شوند و برای کارکرد پایه پروژه Backend اجباری وجود ندارد.
+Sessionها به‌صورت پیش‌فرض محلی هستند و برای استفاده پایه پروژه Backend اجباری وجود ندارد.
 
 ---
 
-## 📜 نسخه
-
-آخرین Release:
-
-**radioforge**
-
----
-
-## 🔗 لینک‌ها
+## 🔗 لینک‌های رسمی
 
 Repository:
 
 https://github.com/shanduzgil/radioforge
 
-Releases:
+Release:
 
-https://github.com/shanduzgil/radioforge/releases
+https://github.com/shanduzgil/radioforge/releases/tag/v1.0.0
 
-دانلود مستقیم:
+APK:
 
-https://github.com/shanduzgil/radioforge/releases/latest/download/RadioForge.apk
-
----
-
-<div align="center">
-
-**RADIOFORGE — Observe • Analyze • Replay • Compare**
-
-</div>
+https://github.com/shanduzgil/radioforge/releases/download/v1.0.0/RadioForge.apk
