@@ -3,57 +3,117 @@
   <img src="assets/radioforge-logo.png" alt="RADIOFORGE" width="360">
 </p>
 
-# 📡 RADIOFORGE
+# 📡 RadioForge
 
-**Private Network Observatory — Collect → Understand → Replay → Compare**
+## پلتفرم هوشمند تحلیل شبکه موبایل و اینترنت اندروید
 
-RADIOFORGE turns an Android phone into an offline-first network telemetry recorder. It collects the radio/cell information that Android exposes to ordinary applications, records sessions locally, and exports an offline archive containing raw JSONL telemetry plus an HTML report.
+RadioForge یک ابزار پیشرفته برای بررسی، ثبت و تحلیل اطلاعات شبکه موبایل در دستگاه‌های اندرویدی است.
 
-## What it does
+این پروژه با هدف ایجاد یک دید دقیق‌تر نسبت به وضعیت اینترنت، اپراتور، نوع شبکه و کیفیت اتصال ساخته شده است تا کاربران بتوانند داده‌های شبکه خود را جمع‌آوری و بررسی کنند.
 
-- LTE / 5G NR / legacy cellular telemetry when the device and Android expose it.
-- Cell identity and signal fields such as CI/NCI, PCI, TAC, EARFCN/NRARFCN, RSRP, RSRQ, RSSI/RSSNR and SS-SINR where available.
-- Active transport, local address, optional Wi-Fi SSID, and public IP.
-- Five-second polling with timestamped JSONL session storage.
-- Foreground capture service for long sessions.
-- Offline export to ZIP with JSONL and HTML report.
-- No backend, account, analytics SDK, or automatic cloud upload.
-- App-private storage by default.
+---
 
-## Android permissions
+## ✨ قابلیت‌ها
 
-RADIOFORGE asks for fine location because Android protects modern CellInfo access behind location permission. The app also requests phone state, network, Wi-Fi, foreground-service and notification permissions as needed by the platform version.
+### 📶 تحلیل شبکه موبایل
 
-Exact location is not included in the telemetry payload in this build. The project intentionally separates radio telemetry from precise coordinates.
+- تشخیص نوع شبکه (2G / 3G / 4G LTE / 5G)
+- تشخیص اپراتور فعال
+- بررسی وضعیت اتصال سیم‌کارت
+- ثبت تغییرات شبکه
 
-## Build
 
-This project is pinned to Android Gradle Plugin 8.13.2 and Gradle 8.13. Open the project in a current Android Studio or run `./gradlew assembleDebug` on a machine with Android SDK 36 and JDK 17+.
+### 🌐 بررسی اینترنت
 
-## Install
+- ثبت IP عمومی
+- اندازه‌گیری تاخیر شبکه (Ping)
+- بررسی کیفیت اتصال
+- ثبت وضعیت ارتباط اینترنت
 
-After building:
 
-`adb install -r app/build/outputs/apk/debug/app-debug.apk`
+### 📊 ذخیره‌سازی اطلاعات
 
-On the phone, open RADIOFORGE, grant the requested permissions, then press **START**.
+- ذخیره گزارش‌های شبکه
+- خروجی JSON
+- خروجی CSV
+- ایجاد تاریخچه داده‌ها
+- ثبت زمان دقیق اطلاعات
 
-## Export
 
-Press **EXPORT** and save `radioforge-session.zip`. The ZIP contains:
+### 🔍 کاربردهای تحقیقاتی
 
-- `session.jsonl` — raw local telemetry
-- `report.html` — an offline summary
-- `README.txt` — archive notes
+RadioForge برای موارد زیر کاربرد دارد:
 
-## Important limitation
+- بررسی کیفیت اینترنت موبایل
+- تحقیقات شبکه‌های ارتباطی
+- تحلیل رفتار اتصال در محیط‌های مختلف
+- آموزش مفاهیم شبکه موبایل
+- ساخت گزارش‌های قابل بررسی
 
-This project does **not** record raw RF/IQ samples. Standard Android application APIs expose interpreted cell/measurement data rather than arbitrary modem baseband samples. Raw RF capture requires specialized radio hardware and is outside the scope of a normal Android app.
 
-## Privacy & security
+---
 
-All captures are stored under the app-private `files/sessions/` directory. No third-party analytics library is used. Release builds enable R8 shrinking/obfuscation. This does not make public source impossible to copy: repository visibility and copyright/license terms are separate concepts.
+# 🚀 نصب و اجرا
 
-## License
+## پیش‌نیازها
 
-Copyright (c) 2026 RADIOFORGE contributors. All Rights Reserved. See `LICENSE` for the repository's restrictive source-availability terms.
+- دستگاه اندرویدی
+- برنامه Termux
+- دسترسی‌های لازم
+
+
+## نصب پروژه
+
+```bash
+git clone https://github.com/shanduzgil/radioforge.git
+
+cd radioforge
+
+مجوز اجرا:
+
+chmod +x *.sh
+
+اجرای ابزار:
+
+./radio_logger.sh
+
+
+---
+
+📁 خروجی پروژه
+
+RadioForge اطلاعات جمع‌آوری شده را در قالب فایل‌های ساختاریافته ذخیره می‌کند تا امکان بررسی و تحلیل آسان وجود داشته باشد.
+
+نمونه اطلاعات:
+
+{
+ "operator": "IR-MCI",
+ "network": "LTE",
+ "ping": "110ms",
+ "time": "2026"
+}
+
+
+---
+
+🔐 حریم خصوصی و امنیت
+
+RadioForge با رویکرد Local-First طراحی شده است.
+
+اطلاعات جمع‌آوری شده روی دستگاه کاربر ذخیره می‌شود و کنترل داده‌ها در اختیار خود کاربر باقی می‌ماند.
+
+
+---
+
+🎯 هدف پروژه
+
+هدف RadioForge ساخت یک ابزار حرفه‌ای، ساده و قابل توسعه برای شناخت بهتر شبکه‌های موبایل و اینترنت است.
+
+این پروژه تلاش می‌کند فاصله بین اطلاعات خام شبکه و تحلیل قابل فهم برای کاربران را کاهش دهد.
+
+
+---
+
+🦊 RadioForge
+
+شبکه خود را بشناسید، داده‌های خود را تحلیل کنید.
